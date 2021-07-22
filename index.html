@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <div id="scrollDist"></div>
+
+    <div id="container" style="opacity:0">
+
+        <div id="bg">
+            <img src="https://assets.codepen.io/721952/hillside.png" alt="hillside" />
+            <!-- generated clouds will go here  -->
+        </div>
+
+        <img class="breakable" id="homes" src="https://assets.codepen.io/721952/homes.png" alt="homes" />
+        <img class="breakable" id="hut" src="https://assets.codepen.io/721952/hut.png" alt="huts" />
+        <img class="breakable" id="pagoda" src="https://assets.codepen.io/721952/pagoda.png" alt="pagoda" />
+        <img class="breakable" id="gates" src="https://assets.codepen.io/721952/gates.png" alt="palace gates" />
+
+        <div class="homesTxt">Single-family Homes</div>
+        <div class="hutTxt">Fishing Huts</div>
+        <div class="pagodaTxt">Temples & Pagodas</div>
+        <div class="towerTxt">Radio Towers</div>
+        <div class="gatesTxt">Palace Gates</div>
+        <div class="endTxt">And so much more...</div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+
+            <clipPath id="seqBox">
+                <rect width="550" height="270" />
+            </clipPath>
+
+            <path class="walkPath" fill="none" stroke="none"
+                d="M251.5,2231.5c262,0,373.7-41.5,498.5-41.8c124.5-0.2,215.8-52,247.5-76.2s164.2-113.8,225-135s141-36,262-125 c46.5-34.2,137-93,236-114s347.2-31.8,435-32s287.2-73.8,354-83s238.2-17.8,277.2-23.8s177-12,219-33s232.3-150.3,293.8-187.2" />
+
+            <g class="kaiju">
+                <g class="seq" clip-path="url(#seqBox)">
+                    <image class="walk" width="550" height="2160" href="https://assets.codepen.io/721952/walk.png"
+                        alt="walking sequence" />
+                </g>
+                <image id="mouth" opacity="0" href="https://assets.codepen.io/721952/mouth.png"
+                    alt="godzilla's open mouth" />
+            </g>
+
+        </svg>
+
+        <img class="breakable" id="tower" src="https://assets.codepen.io/721952/tower.png" alt="radio tower" />
+
+        <!-- generated debris will go here  -->
+    </div>
+
+    <div class="dust">
+        <!-- generated dust and scratches will go here  -->
+    </div>
+
+    <div class="intro">
+        <div class="preTitle">A tour of our specialties with</div>
+        <div id="godzillaTitle" aria-label="godzilla"></div>
+        <div class="blurb">Scroll horizontally to see the O. G. Kaiju demonstrate a few of the things we can destroy for
+            you.
+        </div>
+
+
+
+
+</body>
+
+</html>
